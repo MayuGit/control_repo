@@ -10,7 +10,7 @@ class minecraft {
     ensure => present,  
   }
   
-  file { '/opt/minecraft/eula.txt',
+  file { '/opt/minecraft/eula.txt':
     ensure => file,
     content => 'eula=true',
   }
@@ -19,7 +19,7 @@ class minecraft {
       source => 'puppet:///modules/minecraft/minecraft.service',
   }
   
-  service {'minecraft',
+  service {'minecraft':
     ensure => running,
     enable => true,
   }
