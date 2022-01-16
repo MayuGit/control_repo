@@ -4,7 +4,7 @@ $url = 'https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb4
 $install_dir = '/opt/minecraft',
 $jdk_latest = 'https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm'
 ){
-  file { $install_dir':
+  file { $install_dir:
     ensure  => directory,  
   }
   file {"${install_dir}/server.jar":
